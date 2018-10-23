@@ -46,7 +46,12 @@ class SongController extends Controller
      */
     public function show(Song $song)
     {
-        //
+        return response()->json([
+            'id' => $song->id,
+            'title' => $song->title,
+            'time' => $song->time
+        ]);
+
     }
 
     /**
